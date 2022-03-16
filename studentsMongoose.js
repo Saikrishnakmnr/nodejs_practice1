@@ -35,7 +35,7 @@ const StudentsSchema = new mongoose.Schema({
 })
 
 const StudentsModel = mongoose.model('students',StudentsSchema)
-// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),class:"EEE"})
+// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),class:"6th"})
 
 
 app.get('/',function (req,res){
@@ -77,7 +77,7 @@ app.get("/students/search-by-gender",(req,res)=>{
 })
 
 app.get("/students/search-by-class/:class",(req,res)=>{
-    StudentsModel.find({branch:req.params.class},(err,data)=>{
+    StudentsModel.find({class:req.params.class},(err,data)=>{
         if(err){
             req.send({error:true,message:"unable to fetch data"})
         }
