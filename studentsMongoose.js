@@ -28,14 +28,14 @@ const StudentsSchema = new mongoose.Schema({
         type:Date
     },
 
-    branch:{
+    class:{
         type: String
     }
     
 })
 
 const StudentsModel = mongoose.model('students',StudentsSchema)
-// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),branch:"EEE"})
+// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),class:"EEE"})
 
 
 app.get('/',function (req,res){
