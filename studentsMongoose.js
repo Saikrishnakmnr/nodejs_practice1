@@ -76,8 +76,8 @@ app.get("/students/search-by-gender",(req,res)=>{
     })
 })
 
-app.get("/students/search-by-branch/:class",(req,res)=>{
-    StudentsModel.find({branch:req.params.class},(err,data)=>{
+app.get("/students/search-by-class/:class",(req,res)=>{
+    StudentsModel.find({class:req.params.class},(err,data)=>{
         if(err){
             req.send({error:true,message:"unable to fetch data"})
         }
