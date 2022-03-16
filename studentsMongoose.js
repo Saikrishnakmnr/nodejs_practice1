@@ -35,7 +35,7 @@ const StudentsSchema = new mongoose.Schema({
 })
 
 const StudentsModel = mongoose.model('students',StudentsSchema)
-// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),class:"EEE"})
+// StudentsModel.create({name:"vinay",gender:"male","dob":new Date("20/08/2001"),class:"6th"})
 
 
 app.get('/',function (req,res){
